@@ -1,10 +1,8 @@
 import NeuralNet as nn
 
-layout = [3,2,2,3]
-brain = nn.NeuralNetwork(layout, 0.1)
+layout = [2,2,1]
+brain = nn.NeuralNetwork(layout, 0.1,nn.sigmoid)
 
-for layer in brain.neural_net:
-    print(layer)
+inputs = [1,1]
 
-for bias in brain.bias:
-    print(bias)
+print(brain.predict(inputs))
